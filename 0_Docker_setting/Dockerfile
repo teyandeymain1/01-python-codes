@@ -9,8 +9,6 @@ FROM python:3.13-slim-bookworm
 ENV LANG=C.UTF-8
 # set non-root user
 ARG USERNAME=Python_Docker
-# set local directory
-ARG LOCAL_DIR=/Users/teyan/Desktop/Programming/Codes/6_C_Codes
 
     # create user and group
 RUN groupadd -r $USERNAME &&\
