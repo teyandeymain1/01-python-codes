@@ -1,0 +1,46 @@
+{
+	"name": "Python",
+	"build": {
+		// Sets the run context to one level up instead of the .devcontainer folder.
+		"context": "..",
+		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+		"dockerfile": "Dockerfile"
+	},
+    // -----------------------------------------------上記は変更しないでください----------------------------------------------
+
+
+    // ----------------------------------------------ここは環境によって変更して----------------------------------------------
+    "workspaceMount": "source=c:/Users/teyan/Desktop/Programming/Codes/1_PythonCodes,target=/home/Python_Docker,type=bind,consistency=cached",
+    // ------------------------------------------------上記は環境によって変更して----------------------------------------------
+
+    
+    // ----------------------------------------------以下は変更しないでください----------------------------------------------
+    "workspaceFolder": "/home/Python_Docker",
+    "customizations": {
+        "settings": {"files.autosave"},
+        "vscode": {
+            "extensions": [
+                // Python extension
+                "ms-python.python",
+                "ms-python.debugpy",
+                // Support extension
+                // Verified ownership
+                // Support coding by AI
+                "visualstudioexptteam.vscodeintellicode",
+                "visualstudioexptteam.intellicode-api-usage-examples",
+                "github.copilot",
+                // Code arrangement
+                "oderwat.indent-rainbow",
+                "streetsidesoftware.code-spell-checker",
+                "esbenp.prettier-vscode",
+                // Git
+                "github.vscode-pull-request-github",
+                // Not verified ownership
+                // Git
+                "mhutchie.git-graph"
+            ]
+        }
+    },
+    //
+    "shutdownAction": "stopContainer"
+}
