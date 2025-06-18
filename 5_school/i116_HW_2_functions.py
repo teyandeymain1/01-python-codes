@@ -50,7 +50,7 @@ def f(x):
 
 # area of rectangle
 def h(i,n):
-    return f(i*(2/n)) * (2/n)]
+    return f(i*(2/n)) * (2/n)
 
 # area of trapezoid
 def g(i,n):
@@ -79,4 +79,3 @@ def piWithTrapezoido(e):
         for i in range(n):
             v2 = v2 + g(i,n)
     return v2
-

@@ -2,6 +2,8 @@
 
 from i116_HW_2_functions import *
 
+print("run program inlecture note 2")
+
 # factLoop factRecur
 print('n! is calculated.')
 s = input('Please input n: ')
@@ -44,13 +46,11 @@ print('The square root of ',
 srByBinarySearch(20000000000000000), '.')
 
 # piWithRectangle
-print("pi with Rectangle")
 print('pi is ', piWithRectangle(0.001), ', where e is 0.001.')
 print('pi is ', piWithRectangle(0.00001), ', where e is 0.00001.')
 print('pi is ', piWithRectangle(0.0000001), ', where e is 0.0000001.')
 
 # piWithTrapezoido
-print("pi with Trapezoido")
 print('pi is ', piWithTrapezoido(0.001), ', where e is 0.001.')
 print('pi is ', piWithTrapezoido(0.00001), ', where e is 0.00001.')
 print('pi is ', piWithTrapezoido(0.0000001), ', where e is 0.0000001.')
