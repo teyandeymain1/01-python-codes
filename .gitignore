@@ -1,5 +1,5 @@
-# 業務機密があるかもしれないので念のため
-satomi_gemini/
-
 # 後に削除予定
 1_競プロ用/1library/
+
+# cache
+.vscode-server/
