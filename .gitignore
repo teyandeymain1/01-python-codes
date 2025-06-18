@@ -3,3 +3,8 @@
 
 # cache
 .vscode-server/
+
+# others
+*.png
+*.jpg
+*.jpeg
