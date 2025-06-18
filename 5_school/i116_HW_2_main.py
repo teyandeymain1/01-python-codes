@@ -54,7 +54,3 @@ print('pi is ', piWithRectangle(0.0000001), ', where e is 0.0000001.')
 print('pi is ', piWithTrapezoido(0.001), ', where e is 0.001.')
 print('pi is ', piWithTrapezoido(0.00001), ', where e is 0.00001.')
 print('pi is ', piWithTrapezoido(0.0000001), ', where e is 0.0000001.')
-
-# Homework q5
-print("Homework q5")
-print('The square root of 2 is ', srByBinarySearch(2), '.')
