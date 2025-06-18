@@ -3,6 +3,7 @@
 
 # cache
 .vscode-server/
+__pycache__/
 
 # others
 *.png

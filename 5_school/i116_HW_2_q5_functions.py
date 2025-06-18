@@ -1,15 +1,17 @@
+# 砂川佑太 2510096 s2510096@jaist.ac.jp
+# Homework q5
 
 # formula of quarter circle
 def f(x):
-    return (4 - x**2)**(1/2)
+    return (1-(x-1)**2)**(1/2)
 
 # area of rectangle
 def h(i,n):
-    return f(i*(2/n)) * (2/n)
+    return f(i*(2/n)) * (2/n) * 2
 
 # area of trapezoid
 def g(i,n):
-    return (f(i*(2/n)) + f((i+1)*(2/n))) * (2/n) * (1/2)
+    return (f(i*(2/n)) + f((i+1)*(2/n))) * (2/n) * (1/2) * 2
 
 def piWithRectangle(e):
     n = 1
