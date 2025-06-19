@@ -8,8 +8,16 @@ print("Homework q5")
 print('pi is ', piWithRectangle(0.001), ', where e is 0.001.')
 print('pi is ', piWithRectangle(0.00001), ', where e is 0.00001.')
 print('pi is ', piWithRectangle(0.0000001), ', where e is 0.0000001.')
+# stopwatch
+stopwatch("piWithRectangle", piWithRectangle(0.001), 0.001)
+stopwatch("piWithRectangle", piWithRectangle(0.00001), 0.00001)
+stopwatch("piWithRectangle", piWithRectangle(0.0000001), 0.0000001)
 
 # piWithTrapezoido
 print('pi is ', piWithTrapezoido(0.001), ', where e is 0.001.')
 print('pi is ', piWithTrapezoido(0.00001), ', where e is 0.00001.')
 print('pi is ', piWithTrapezoido(0.0000001), ', where e is 0.0000001.')
+# stopwatch
+stopwatch("piWithTrapezoido", piWithTrapezoido(0.001), 0.001)
+stopwatch("piWithTrapezoido", piWithTrapezoido(0.00001), 0.00001)
+stopwatch("piWithTrapezoido", piWithTrapezoido(0.0000001), 0.0000001)
