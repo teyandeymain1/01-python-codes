@@ -2,6 +2,8 @@
 1_競プロ用/1library/
 
 # cache
+.cache/
+.dotnet/
 .vscode-server/
 __pycache__/
 
