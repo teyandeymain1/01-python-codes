@@ -7,7 +7,7 @@ FROM python:3.13-slim-bookworm
 # set language environment
 ENV LANG=C.UTF-8
 # set non-root user
-ARG USERNAME=Python_Docker
+ARG USERNAME=python_with_docker
 
     # create user and group
 RUN groupadd -r $USERNAME &&\
