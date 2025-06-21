@@ -6,6 +6,7 @@
 .dotnet/
 .vscode-server/
 __pycache__/
+.bash_history
 
 # others
 *.png
