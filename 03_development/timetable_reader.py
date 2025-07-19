@@ -1,7 +1,7 @@
 import os
 import csv
-from datetime import *
 import unicodedata
+from datetime import *
 
 
 def convert_csv_into_dict(csv_path: str, week_or_holiday: dict, directions: dict) -> dict:
@@ -82,7 +82,7 @@ def find_next_bus_times(current_datetime: datetime, timetable_for_selected_bus_s
     next_bus_times = list()
 
     for i, next_bus_time in enumerate(timetable_for_selected_bus_stop):
-        if  i == len(timetable_for_selected_bus_stop) - 1:
+        if  i >= len(timetable_for_selected_bus_stop):
             next_bus_times = ["本日の運行は終了しました。"]
             break
         elif next_bus_time == "-":
