@@ -9,8 +9,10 @@ ENV LANG=C.UTF-8
 # set non-root user
 ARG USERNAME=python_with_docker
 
-    # create user and group
-RUN groupadd -r $USERNAME &&\
+    # install git and create user and group
+RUN apt-get update &&\
+    apt-get install -y git &&\
+    groupadd -r $USERNAME &&\
     useradd -r -m -g $USERNAME $USERNAME &&\  
     rm -rf /var/lib/apt/lists/*
 
