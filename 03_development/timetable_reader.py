@@ -1,6 +1,5 @@
 import os
 import csv
-import unicodedata
 from datetime import *
 
 
@@ -16,7 +15,7 @@ def convert_csv_into_dict(csv_path: str, week_or_holiday: str, directions: dict)
     for row in timetable_reader:
 
         if row[0] == week_or_holiday:
-            day             = week_or_holiday
+            day = week_or_holiday
             continue
         else:
             pass
@@ -33,7 +32,7 @@ def convert_csv_into_dict(csv_path: str, week_or_holiday: str, directions: dict)
             pass
 
         if day and direction:   # Check if day/=None and direction/=None
-            normalized_row = [unicodedata.normalize('NFKC', word).strip() for word in row]  # Normalize each words in row
+            normalized_row = list(bus_stop.strip() for bus_stop in row)  # Normalize each words in row
             timetable[direction].append(normalized_row)    # timetable = {direction: [時刻1, 時刻2, ...]}
         else:
             pass
@@ -41,7 +40,7 @@ def convert_csv_into_dict(csv_path: str, week_or_holiday: str, directions: dict)
     return timetable        
 
 
-def extract_timetable_for_each_bus_stop(timetable: dict, day:str, selected_direction: str, selected_bus_stop: str) -> list:
+def extract_timetable_for_each_bus_stop(timetable: dict, selected_direction: str, selected_bus_stop: str) -> list:
 
     selected_timetable = list()
 
