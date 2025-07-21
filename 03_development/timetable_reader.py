@@ -21,12 +21,12 @@ def convert_csv_into_dict(csv_path: str, week_or_holiday: str, directions: dict)
             pass
 
         if day and row[0] == directions[1]:     # if day/=None and direction==JAIST発
-            direction                   = directions[1]
-            timetable[day][direction]   = list()
+            direction               = directions[1]
+            timetable[direction]    = list()
             continue
         elif day and row[0] == directions[2]:   # if day/=None and direction==鶴来駅発
-            direction                   = directions[2]
-            timetable[day][direction]   = list()
+            direction               = directions[2]
+            timetable[direction]    = list()
             continue
         else:
             pass
