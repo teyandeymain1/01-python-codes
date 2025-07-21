@@ -42,8 +42,8 @@ def main():
         print("無効な方面です。1または2の整数を入力してください。")
         exit(1)
 
-    timetable                       = convert_csv_into_dict(TIMETABLE_PATH, week_or_holiday, directions)
-    timetable_for_selected_bus_stop = extract_timetable_for_each_bus_stop(timetable, day, selected_direction, selected_bus_stop)
+    timetable                       = convert_csv_into_dict(TIMETABLE_PATH, day, directions)
+    timetable_for_selected_bus_stop = extract_timetable_for_each_bus_stop(timetable, selected_direction, selected_bus_stop)
     next_bus_times                  = find_next_bus_times(current_time, timetable_for_selected_bus_stop)
 
     selecter = int(input("次の操作を選択し整数で入力してください:\n1. 次のバスの時刻を表示\n2. 現在時刻以降のすべてのバスの時刻を表示 \n: ").strip())
