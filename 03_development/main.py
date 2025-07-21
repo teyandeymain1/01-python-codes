@@ -5,7 +5,7 @@ from timetable_reader import *
 # path of csv file
 TIMETABLE_PATH = os.path.join(os.path.dirname(__file__), 'jaist_bus_timetable.csv')
 
-# days and directions
+# days and directions 下記の文字列はcsv内の文字列と全く同じものにしてください。
 week_or_holiday = {1:'平日用', 2:'休日用'}
 bus_stops       = {1:'JAIST', 2:'ハイテクセンタ-前', 3:'宮竹ヘルスロ-ド', 4:'灯台笹', 5:'岩本', 6:'本鶴来', 7:'鶴来本町', 8:'鶴来駅'}
 directions      = {1:'鶴来行', 2:'JAIST行'}
