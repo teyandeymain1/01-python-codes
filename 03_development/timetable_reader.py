@@ -40,6 +40,7 @@ def convert_csv_into_dict(csv_path: str, week_or_holiday: str, directions: dict)
     return timetable        
 
 
+# def extract_timetable_for_each_bus_stop(timetable: dict, selected_direction: str, departure_stop: str, arrival_stop: str = None) -> list:
 def extract_timetable_for_each_bus_stop(timetable: dict, selected_direction: str, selected_bus_stop: str) -> list:
 
     selected_timetable = list()
@@ -57,6 +58,7 @@ def extract_timetable_for_each_bus_stop(timetable: dict, selected_direction: str
         return list()
 
 
+# def find_bus_stop_index(selected_timetable: list, departure_stop: str, arrival_stop: str = None) -> int:
 def find_bus_stop_index(selected_timetable: list, selected_bus_stop: str) -> int:
 
     bus_stop_index = -1
@@ -71,6 +73,7 @@ def find_bus_stop_index(selected_timetable: list, selected_bus_stop: str) -> int
     return bus_stop_index
 
 
+# def find_next_bus_times(current_datetime: datetime, timetable_for_departure_stop: list, timetable_for_arrival_stop: list = None) -> list:
 def find_next_bus_times(current_datetime: datetime, timetable_for_selected_bus_stop: list) -> list:
 
     next_bus_times = list()

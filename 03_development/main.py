@@ -20,6 +20,8 @@ def main():
 
     print(f"現在時刻: {current_time}")
 
+    # JAIST発 と　鶴来駅発　のバスの次発の時刻は常に表示したい
+
     n_b = input(f"バス停を選択し整数で入力してください。\n{bus_stops}\n: ").strip()
     if n_b.strip():
         if 1 <= int(n_b) <= len(bus_stops):
@@ -41,10 +43,10 @@ def main():
     else:
         print("無効な方面です。1または2の整数を入力してください。")
         exit(1)
-
+    # 行先と方面が同じときはJAIST着とかく。
     timetable                       = convert_csv_into_dict(TIMETABLE_PATH, day, directions)
-    timetable_for_selected_bus_stop = extract_timetable_for_each_bus_stop(timetable, selected_direction, selected_bus_stop)
-    next_bus_times                  = find_next_bus_times(current_time, timetable_for_selected_bus_stop)
+    timetable_for_selected_bus_stop = extract_timetable_for_each_bus_stop(timetable, selected_direction, selected_bus_stop) #(timetable, selected_direction, departure_stop, arrival_stop)
+    next_bus_times                  = find_next_bus_times(current_time, timetable_for_selected_bus_stop) #(current_datetime, timetable_for_departure_stop, timetable_for_arrival_stop)
 
     selecter = int(input("次の操作を選択し整数で入力してください:\n1. 次のバスの時刻を表示\n2. 現在時刻以降のすべてのバスの時刻を表示 \n: ").strip())
 
