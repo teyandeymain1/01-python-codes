@@ -4,10 +4,10 @@ import unicodedata
 from datetime import *
 
 
-def convert_csv_into_dict(csv_path: str, week_or_holiday: dict, directions: dict) -> dict:
+def convert_csv_into_dict(csv_path: str, week_or_holiday: str, directions: dict) -> dict:
 
     with open(csv_path, 'r', encoding='utf-8-sig') as csv_file:
-        timetable_reader = [ row.strip().split(',') for row in csv_file if row.strip() ]
+        timetable_reader = list(row.strip().split(',') for row in csv_file if row.strip())
     
     timetable   = dict()
     day         = None
@@ -15,13 +15,8 @@ def convert_csv_into_dict(csv_path: str, week_or_holiday: dict, directions: dict
     
     for row in timetable_reader:
 
-        if row[0] == week_or_holiday[1]:
-            day             = week_or_holiday[1]
-            timetable[day]  = dict()
-            continue
-        elif row[0] == week_or_holiday[2]:
-            day             = week_or_holiday[2]
-            timetable[day]  = dict()
+        if row[0] == week_or_holiday:
+            day             = week_or_holiday
             continue
         else:
             pass
@@ -39,7 +34,7 @@ def convert_csv_into_dict(csv_path: str, week_or_holiday: dict, directions: dict
 
         if day and direction:   # Check if day/=None and direction/=None
             normalized_row = [unicodedata.normalize('NFKC', word).strip() for word in row]  # Normalize each words in row
-            timetable[day][direction].append(normalized_row)    # timetable = {day: {direction: [時刻1, 時刻2, ...]}}
+            timetable[direction].append(normalized_row)    # timetable = {direction: [時刻1, 時刻2, ...]}
         else:
             pass
 
@@ -50,8 +45,8 @@ def extract_timetable_for_each_bus_stop(timetable: dict, day:str, selected_direc
 
     selected_timetable = list()
 
-    if selected_direction in timetable[day]:
-        selected_timetable  = timetable[day][selected_direction]
+    if selected_direction in timetable:
+        selected_timetable  = timetable[selected_direction]
         bus_stop_index      = find_bus_stop_index(selected_timetable, selected_bus_stop)
         if bus_stop_index == -1:
             print(f"内部処理エラー: '{selected_bus_stop}'バス停は存在しません。csvファイルを確認してください。")
