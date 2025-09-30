@@ -7,4 +7,4 @@
 	name = teyandeymain1
 	email = teyandey419@gmail.com
 [credential]
-	helper = "!f() { /home/python_with_docker/.vscode-server/bin/7adae6a56e34cb64d08899664b814cf620465925/node /tmp/vscode-remote-containers-6cd89494-5c83-4f43-aa7b-8579a988658a.js git-credential-helper $*; }; f"
+	helper = "!f() { /home/python_with_docker/.vscode-server/bin/19e0f9e681ecb8e5c09d8784acaa601316ca4571/node /tmp/vscode-remote-containers-99254539-683e-4a0f-a1d1-d779333ae82a.js git-credential-helper $*; }; f"

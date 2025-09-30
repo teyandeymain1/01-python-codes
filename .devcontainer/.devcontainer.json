@@ -8,8 +8,8 @@
 
 
     // ----------------------------------------------ここは環境によって変更して----------------------------------------------
-    "workspaceMount": "source=c:/Users/teyan/Desktop/Programming/Codes/01-python-codes,target=/home/python_with_docker,type=bind,consistency=cached", // for Windows
-    //"workspaceMount": "source=/home/yuta/programming/sunagawa_private/01-python-codes,target=/home/python_with_docker,type=bind,consistency=cached", // for Linux 2
+    //"workspaceMount": "source=c:/Users/teyan/Desktop/Programming/Codes/01-python-codes,target=/home/python_with_docker,type=bind,consistency=cached", // for Windows
+    "workspaceMount": "source=/home/yuta/programming/sunagawa_private/01-python-codes,target=/home/python_with_docker,type=bind,consistency=cached", // for Linux 2
     // ------------------------------------------------上記は環境によって変更して----------------------------------------------
 
     
