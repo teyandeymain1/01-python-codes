@@ -1,0 +1,14 @@
+# cache
+*.cache/
+*.dotnet/
+*.ssh/
+*.vscode/
+*.vscode-server/
+*__pycache__/
+*.bash_history
+
+# others
+.png
+.jpg
+.jpeg
+.local/
